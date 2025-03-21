@@ -5,12 +5,12 @@ def main(page: ft.Page):
     page.bgcolor = "lightgray"
 
     frases = {
-        "Inglés": "Power comes in response to a need, not a desire. You have to create that need.",
+        "Japones": "Chikara wa yokubōde wanaku hitsuyō-sei ni ōjite umaremasu. Hitsuyō-sei wa jibun de tsukuridasanakereba narimasen.",
         "Español": "El poder viene en respuesta a una necesidad, no a un deseo. Tienes que crear esa necesidad.",
-        "Francés": "Le pouvoir vient en réponse à un besoin, pas à un désir. Vous devez créer ce besoin."
+        "Ingles": "Power comes from need, not desire, and need must be created by you."
     }
 
-    frase_mostrada = ft.Text(frases["Inglés"], size=16, weight=ft.FontWeight.BOLD)
+    frase_mostrada = ft.Text(frases["Japones"], size=16, weight=ft.FontWeight.BOLD)
 
     def cambiar_frase(e):
         frase_mostrada.value = frases[e.control.value]
@@ -18,11 +18,11 @@ def main(page: ft.Page):
 
     idiomas = ft.RadioGroup(
         content=ft.Column([
-            ft.Radio(value="Inglés", label="Inglés"),
+            ft.Radio(value="Japones", label="Japones"),
             ft.Radio(value="Español", label="Español"),
-            ft.Radio(value="Francés", label="Francés")
+            ft.Radio(value="Ingles", label="Ingles")
         ]),
-        value="Inglés",
+        value="Japones",
         on_change=cambiar_frase
     )
 
